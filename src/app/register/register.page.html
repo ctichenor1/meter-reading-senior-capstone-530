@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>United Systems Meter Tracking - Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<img style="margin:10px" src="\assets\unitedsystems_logo.png" />
+<h4 text-center margin-top>Register for an account</h4>
+
+
+  <ion-item>
+    <ion-label stacked>Email Address</ion-label>
+    <ion-input [(ngModel)]="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label stacked>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  
+   <ion-item>
+    <ion-label stacked>Confirm Password</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+
+  <div text-center margin-top margin-bottom=100>
+    
+    <ion-button (click)="goToRegister()" href="/login" size="small" class="ios button button-small button-solid ion-activatable ion-focusable hydrated">Back to Login</ion-button>
+
+    <ion-button (click)="goRegister()" size="small" class="ios button button-small button-solid ion-activatable ion-focusable hydrated">Register</ion-button>
+
+   
+  </div>
