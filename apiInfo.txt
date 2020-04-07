@@ -1,0 +1,44 @@
+API IP Address: 0.0.0.58999
+Endpoints
+api/Auth/Register
+
+Type: POST
+Input(body): object { string Email, string Password, string ConfirmPassword }
+Output: HTTP Response
+Description: Used to register a new account.
+Full Path: http://0.0.0.0:58999/api/Auth/Register
+
+api/Auth/Login
+Type: POST
+Input(body): object { string Email, string Password  }
+Output: HTTP Response
+Description: Used to log into the application.
+Full Path: http://0.0.0.0:58999/api/Auth/Login
+
+api/Auth/DeleteUser
+Type: DELETE
+Input(url): string userName
+Output: HTTP Response
+Description: Used to delete a user.
+Full Path: http://0.0.0.0:58999/api/Auth/DeleteUser?userName=emailUsedToRegister
+
+api/Account/GetAccounts
+Type: GET
+Input: n/a
+Output: HTTP Response
+Description: Gets a list of all accounts.
+Full Path: http://0.0.0.0:58999/api/Account/GetAccounts
+
+api/Account/GetRoute
+Type: GET
+Input(url): int route
+Output: HTTP Response
+Description: Gets a list of all accounts in the specified route.
+Full Path: http://0.0.0.0:58999/api/Account/GetRoute?route=1
+
+api/Account/GetMeterReadings
+Type: GET
+Input(url): int meterID
+Output: HTTP Response
+Description: Gets a complete list of readings related to the specified meter.
+Full Path: http://0.0.0.0:58999/api/Account/GetMeterReadingsmeterID=1
