@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Platform } from 'ionic-angular';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import { ConnectionService } from '../app/services/connection-services'
 
 @Component({
   selector: 'app-root',
@@ -26,9 +27,11 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private connectionService: ConnectionService
   ) {
     this.initializeApp();
+    this.connectionService.apiValue.emit("localhost:58999")
   }
 
   initializeApp() {
